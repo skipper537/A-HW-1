@@ -20,15 +20,20 @@ document.writeln(`<p>Сума цілих чисел: ${sumaOfIntegers}</p>`);
 
 let sumaOfHundreds = (Math.round(suma/100))*100;
 console.log(`Сума окуглена до сотень: ${sumaOfHundreds}`);
-document.writeln(`<p>Сума окуглена до сотень: ${sumaOfHundreds}</p>`);
+document.writeln(`<p>Сума округлена до сотень: ${sumaOfHundreds}</p>`);
 
-if(Math.floor(suma)%2===0)
+const isEven = (sum)=>{
+    if(Math.floor(sum)%2===0)
 {
-console.log(`Парне, ${true}`)
-document.writeln(`<p>Парне, ${true}</p>`)
-}else
-    console.log(`Непарне, ${false}`)
-    document.writeln(`<p>Непарне, ${false}</p>`)
+console.log(`${sum} парне, ${true}`)
+document.writeln(`<p>${sum} парне, ${true}</p>`)
+}else{
+    console.log(`${sum} непарне, ${false}`)
+    document.writeln(`<p>${sum} непарне, ${false}</p>`)
+}
+}
+isEven(suma);
+isEven(sumaOfIntegers);
 
 let rest = 500 - suma;
 console.log(`Решта, ${rest}грн`);
